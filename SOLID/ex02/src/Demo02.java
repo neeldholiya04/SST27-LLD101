@@ -1,4 +1,5 @@
 /*
+ * Issues in Existing Implementation
  * Player decodes, renders UI, and caches frames. That’s three responsibilities in one class. It violates the Single Responsibility Principle.
  * If you want to change how decoding happens (e.g., MP3 vs. WAV), or how UI draws (CLI vs. GUI), you’d have to modify Player. This is the violation of Open/Closed Principle.
  * Player depends on concrete classes. It should depend on abstractions. This is the violation of Dependency Inversion Principle.
