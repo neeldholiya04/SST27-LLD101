@@ -1,4 +1,5 @@
 /*
+ * Issues in Existing Implementation
  * OrderService calculates totals, stores orders, and sends emails. That’s multiple responsibilities. It violates the Single Responsibility Principle.
  * OrderService is tightly coupled to EmailClient. If we wanted to add SMS or another notifier, we need to modify OrderService. This is the violation of Open/Closed Principle.
  * OrderService depends on a concrete class EmailClient. It should depend on an abstraction. This is the violation of Dependency Inversion Principle.
