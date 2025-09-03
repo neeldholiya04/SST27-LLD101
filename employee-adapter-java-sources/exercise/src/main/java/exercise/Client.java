@@ -21,9 +21,12 @@ public class Client {
     );
 
     // TODO: Wrap each legacy object with the right adapter and collect into one list
-    List<Employee> all = new ArrayList<>();
+      List<Employee> all = new ArrayList<>();
+      csvRows.forEach(e -> all.add(EmployeeAdapterFactory.adapt(e)));
+      dbRows.forEach(e -> all.add(EmployeeAdapterFactory.adapt(e)));
+      ldapRows.forEach(e -> all.add(EmployeeAdapterFactory.adapt(e)));
 
+      EmployeePrinter.print(all);
 
-    EmployeePrinter.print(all);
   }
 }
