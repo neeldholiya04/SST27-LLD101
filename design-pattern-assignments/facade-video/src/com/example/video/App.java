@@ -13,7 +13,6 @@ public class App {
                 0.5,
                 3
         );
-
         System.out.println("Wrote " + out);
     }
 }
